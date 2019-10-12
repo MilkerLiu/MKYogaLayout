@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4617714220B83B3700BE5DF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4617714120B83B3700BE5DF5 /* AppDelegate.m */; };
+		4617714520B83B3700BE5DF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4617714420B83B3700BE5DF5 /* ViewController.m */; };
+		4617714A20B83B3700BE5DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4617714920B83B3700BE5DF5 /* Assets.xcassets */; };
+		4617714D20B83B3700BE5DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4617714B20B83B3700BE5DF5 /* LaunchScreen.storyboard */; };
+		4617715020B83B3700BE5DF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4617714F20B83B3700BE5DF5 /* main.m */; };
+		4633340421D46E4D00E2CB05 /* layout.json in Resources */ = {isa = PBXBuildFile; fileRef = 4633340321D46E4D00E2CB05 /* layout.json */; };
+		4633343021D6007700E2CB05 /* UIView+MKYogaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4633342F21D6007700E2CB05 /* UIView+MKYogaStyle.m */; };
+		4633343321D600D400E2CB05 /* UILabel+MKYogaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4633343221D600D400E2CB05 /* UILabel+MKYogaStyle.m */; };
+		4633343621D601B300E2CB05 /* MKYogaTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 4633343521D601B300E2CB05 /* MKYogaTransform.m */; };
+		4633343921D606BE00E2CB05 /* MKExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 4633343821D606BE00E2CB05 /* MKExpression.m */; };
+		4633344921D62A3200E2CB05 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 4633344821D62A3200E2CB05 /* style.json */; };
+		4633344C21D642BA00E2CB05 /* MKYoga.m in Sources */ = {isa = PBXBuildFile; fileRef = 4633344B21D642BA00E2CB05 /* MKYoga.m */; };
+		4633344F21D64B5600E2CB05 /* UIImageView+MKYogaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4633344E21D64B5600E2CB05 /* UIImageView+MKYogaStyle.m */; };
+		4648AB0121D3840A0082F885 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4648AB0021D3840A0082F885 /* libc++.tbd */; };
+		4648AB0721D387030082F885 /* UIColor+MKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4648AB0621D387030082F885 /* UIColor+MKColor.m */; };
+		4676337721D380CE00EADED9 /* UIView+MKYoga.m in Sources */ = {isa = PBXBuildFile; fileRef = 4676337621D380CE00EADED9 /* UIView+MKYoga.m */; };
+		4676337921D382C300EADED9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4676337821D382C300EADED9 /* UIKit.framework */; };
+		4676337B21D382CE00EADED9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4676337A21D382CE00EADED9 /* Foundation.framework */; };
+		BFDF0910DA89165ADEB44E2F /* libPods-MKYogaLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A965F7FB976BAF0BE80D85E3 /* libPods-MKYogaLayout.a */; };
+		BFFA900DBCC771E52953E1E1 /* MPSimpleLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA92B73ADC36505EE04CE9 /* MPSimpleLayoutViewController.m */; };
+		BFFA911143C3775A4E409A46 /* MPDataBindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9F708D73242D95B46E99 /* MPDataBindViewController.m */; };
+		BFFA92AAF9259736AEA64CCC /* MPStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA900827C3B580A54BA3FC /* MPStyleViewController.m */; };
+		BFFA9983000FF670D159D41A /* MKTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA945FE0DE79D14366934D /* MKTapGestureRecognizer.m */; };
+		BFFA9A50A68EB01D8DBC0FA2 /* MKScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9B8ED620A55F6DCFF4B7 /* MKScreen.m */; };
+		BFFA9C22546A0DC96DCE1756 /* UIButton+MKYogaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9FAE0752F9674BA33285 /* UIButton+MKYogaStyle.m */; };
+		BFFA9D1DA8F34EA97F0EA149 /* MKScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA906D7A0F86AC071B3B5D /* MKScrollView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4617713D20B83B3700BE5DF5 /* MKYogaLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKYogaLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4617714020B83B3700BE5DF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4617714120B83B3700BE5DF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4617714320B83B3700BE5DF5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4617714420B83B3700BE5DF5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4617714920B83B3700BE5DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4617714C20B83B3700BE5DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4617714E20B83B3700BE5DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4617714F20B83B3700BE5DF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4633340321D46E4D00E2CB05 /* layout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = layout.json; sourceTree = "<group>"; };
+		4633342C21D5FFF400E2CB05 /* MKYogaLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKYogaLayout.h; sourceTree = "<group>"; };
+		4633342E21D6007700E2CB05 /* UIView+MKYogaStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MKYogaStyle.h"; sourceTree = "<group>"; };
+		4633342F21D6007700E2CB05 /* UIView+MKYogaStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKYogaStyle.m"; sourceTree = "<group>"; };
+		4633343121D600D400E2CB05 /* UILabel+MKYogaStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+MKYogaStyle.h"; sourceTree = "<group>"; };
+		4633343221D600D400E2CB05 /* UILabel+MKYogaStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MKYogaStyle.m"; sourceTree = "<group>"; };
+		4633343421D601B300E2CB05 /* MKYogaTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKYogaTransform.h; sourceTree = "<group>"; };
+		4633343521D601B300E2CB05 /* MKYogaTransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKYogaTransform.m; sourceTree = "<group>"; };
+		4633343721D606BE00E2CB05 /* MKExpression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKExpression.h; sourceTree = "<group>"; };
+		4633343821D606BE00E2CB05 /* MKExpression.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKExpression.m; sourceTree = "<group>"; };
+		4633344821D62A3200E2CB05 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		4633344A21D642BA00E2CB05 /* MKYoga.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKYoga.h; sourceTree = "<group>"; };
+		4633344B21D642BA00E2CB05 /* MKYoga.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKYoga.m; sourceTree = "<group>"; };
+		4633344D21D64B5600E2CB05 /* UIImageView+MKYogaStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MKYogaStyle.h"; sourceTree = "<group>"; };
+		4633344E21D64B5600E2CB05 /* UIImageView+MKYogaStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MKYogaStyle.m"; sourceTree = "<group>"; };
+		4648AB0021D3840A0082F885 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		4648AB0521D387030082F885 /* UIColor+MKColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+MKColor.h"; sourceTree = "<group>"; };
+		4648AB0621D387030082F885 /* UIColor+MKColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MKColor.m"; sourceTree = "<group>"; };
+		4676337521D380CE00EADED9 /* UIView+MKYoga.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MKYoga.h"; sourceTree = "<group>"; };
+		4676337621D380CE00EADED9 /* UIView+MKYoga.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKYoga.m"; sourceTree = "<group>"; };
+		4676337821D382C300EADED9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4676337A21D382CE00EADED9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4ECA026272D9F93AAC9A9E32 /* Pods-MKYogaLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKYogaLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-MKYogaLayout/Pods-MKYogaLayout.release.xcconfig"; sourceTree = "<group>"; };
+		A965F7FB976BAF0BE80D85E3 /* libPods-MKYogaLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKYogaLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFA900827C3B580A54BA3FC /* MPStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPStyleViewController.m; sourceTree = "<group>"; };
+		BFFA906D7A0F86AC071B3B5D /* MKScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKScrollView.m; sourceTree = "<group>"; };
+		BFFA92B73ADC36505EE04CE9 /* MPSimpleLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSimpleLayoutViewController.m; sourceTree = "<group>"; };
+		BFFA945FE0DE79D14366934D /* MKTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTapGestureRecognizer.m; sourceTree = "<group>"; };
+		BFFA980C3E56DC459995C640 /* MKTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTapGestureRecognizer.h; sourceTree = "<group>"; };
+		BFFA9949EA0EC15104C43555 /* MKScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKScreen.h; sourceTree = "<group>"; };
+		BFFA9AB95FF30E7B7FA6953A /* MPDataBindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPDataBindViewController.h; sourceTree = "<group>"; };
+		BFFA9B219185D61F805EFBF0 /* UIButton+MKYogaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MKYogaStyle.h"; sourceTree = "<group>"; };
+		BFFA9B8ED620A55F6DCFF4B7 /* MKScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKScreen.m; sourceTree = "<group>"; };
+		BFFA9BB0469973B57453E263 /* MKScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKScrollView.h; sourceTree = "<group>"; };
+		BFFA9E0F0590CB52FC3234F6 /* MPStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPStyleViewController.h; sourceTree = "<group>"; };
+		BFFA9F708D73242D95B46E99 /* MPDataBindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPDataBindViewController.m; sourceTree = "<group>"; };
+		BFFA9F754BC814C02D301815 /* MPSimpleLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSimpleLayoutViewController.h; sourceTree = "<group>"; };
+		BFFA9FAE0752F9674BA33285 /* UIButton+MKYogaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MKYogaStyle.m"; sourceTree = "<group>"; };
+		EAB19206FFC82644F75A5250 /* Pods-MKYogaLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKYogaLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MKYogaLayout/Pods-MKYogaLayout.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4617713A20B83B3700BE5DF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4648AB0121D3840A0082F885 /* libc++.tbd in Frameworks */,
+				4676337B21D382CE00EADED9 /* Foundation.framework in Frameworks */,
+				4676337921D382C300EADED9 /* UIKit.framework in Frameworks */,
+				BFDF0910DA89165ADEB44E2F /* libPods-MKYogaLayout.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4617713420B83B3700BE5DF5 = {
+			isa = PBXGroup;
+			children = (
+				4633343A21D6129500E2CB05 /* Lib */,
+				4676337421D380A900EADED9 /* Classes */,
+				4617713F20B83B3700BE5DF5 /* MKYogaLayout */,
+				4617713E20B83B3700BE5DF5 /* Products */,
+				F553A9B1C7935FD1C0AF8EC3 /* Pods */,
+				BCDEDDCB54D95C6C1685ED38 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4617713E20B83B3700BE5DF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4617713D20B83B3700BE5DF5 /* MKYogaLayout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4617713F20B83B3700BE5DF5 /* MKYogaLayout */ = {
+			isa = PBXGroup;
+			children = (
+				4617714020B83B3700BE5DF5 /* AppDelegate.h */,
+				4617714120B83B3700BE5DF5 /* AppDelegate.m */,
+				4617714320B83B3700BE5DF5 /* ViewController.h */,
+				4617714420B83B3700BE5DF5 /* ViewController.m */,
+				4617714920B83B3700BE5DF5 /* Assets.xcassets */,
+				4617714B20B83B3700BE5DF5 /* LaunchScreen.storyboard */,
+				4617714E20B83B3700BE5DF5 /* Info.plist */,
+				4617714F20B83B3700BE5DF5 /* main.m */,
+				4633340321D46E4D00E2CB05 /* layout.json */,
+				4633344821D62A3200E2CB05 /* style.json */,
+				BFFA91F4BA1781AD935426C7 /* Demo */,
+			);
+			path = MKYogaLayout;
+			sourceTree = "<group>";
+		};
+		4633342A21D5FFD300E2CB05 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4676337521D380CE00EADED9 /* UIView+MKYoga.h */,
+				4676337621D380CE00EADED9 /* UIView+MKYoga.m */,
+				4633344A21D642BA00E2CB05 /* MKYoga.h */,
+				4633344B21D642BA00E2CB05 /* MKYoga.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4633342B21D5FFD900E2CB05 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4633342E21D6007700E2CB05 /* UIView+MKYogaStyle.h */,
+				4633342F21D6007700E2CB05 /* UIView+MKYogaStyle.m */,
+				4633343121D600D400E2CB05 /* UILabel+MKYogaStyle.h */,
+				4633343221D600D400E2CB05 /* UILabel+MKYogaStyle.m */,
+				4633344D21D64B5600E2CB05 /* UIImageView+MKYogaStyle.h */,
+				4633344E21D64B5600E2CB05 /* UIImageView+MKYogaStyle.m */,
+				BFFA9FAE0752F9674BA33285 /* UIButton+MKYogaStyle.m */,
+				BFFA9B219185D61F805EFBF0 /* UIButton+MKYogaStyle.h */,
+				BFFA9BB0469973B57453E263 /* MKScrollView.h */,
+				BFFA906D7A0F86AC071B3B5D /* MKScrollView.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4633342D21D6000700E2CB05 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				4648AB0521D387030082F885 /* UIColor+MKColor.h */,
+				4648AB0621D387030082F885 /* UIColor+MKColor.m */,
+				4633343421D601B300E2CB05 /* MKYogaTransform.h */,
+				4633343521D601B300E2CB05 /* MKYogaTransform.m */,
+				4633343721D606BE00E2CB05 /* MKExpression.h */,
+				4633343821D606BE00E2CB05 /* MKExpression.m */,
+				BFFA945FE0DE79D14366934D /* MKTapGestureRecognizer.m */,
+				BFFA980C3E56DC459995C640 /* MKTapGestureRecognizer.h */,
+				BFFA9B8ED620A55F6DCFF4B7 /* MKScreen.m */,
+				BFFA9949EA0EC15104C43555 /* MKScreen.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		4633343A21D6129500E2CB05 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		4676337421D380A900EADED9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4633342D21D6000700E2CB05 /* Tools */,
+				4633342B21D5FFD900E2CB05 /* Components */,
+				4633342A21D5FFD300E2CB05 /* Core */,
+				4633342C21D5FFF400E2CB05 /* MKYogaLayout.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BCDEDDCB54D95C6C1685ED38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4648AB0021D3840A0082F885 /* libc++.tbd */,
+				4676337A21D382CE00EADED9 /* Foundation.framework */,
+				4676337821D382C300EADED9 /* UIKit.framework */,
+				A965F7FB976BAF0BE80D85E3 /* libPods-MKYogaLayout.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFFA91F4BA1781AD935426C7 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				BFFA92B73ADC36505EE04CE9 /* MPSimpleLayoutViewController.m */,
+				BFFA9F754BC814C02D301815 /* MPSimpleLayoutViewController.h */,
+				BFFA9F708D73242D95B46E99 /* MPDataBindViewController.m */,
+				BFFA9AB95FF30E7B7FA6953A /* MPDataBindViewController.h */,
+				BFFA900827C3B580A54BA3FC /* MPStyleViewController.m */,
+				BFFA9E0F0590CB52FC3234F6 /* MPStyleViewController.h */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		F553A9B1C7935FD1C0AF8EC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAB19206FFC82644F75A5250 /* Pods-MKYogaLayout.debug.xcconfig */,
+				4ECA026272D9F93AAC9A9E32 /* Pods-MKYogaLayout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4617713C20B83B3700BE5DF5 /* MKYogaLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4617715320B83B3700BE5DF5 /* Build configuration list for PBXNativeTarget "MKYogaLayout" */;
+			buildPhases = (
+				EA880BD724E8CC37C99E2325 /* [CP] Check Pods Manifest.lock */,
+				4617713920B83B3700BE5DF5 /* Sources */,
+				4617713A20B83B3700BE5DF5 /* Frameworks */,
+				4617713B20B83B3700BE5DF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MKYogaLayout;
+			productName = MKYogaLayout;
+			productReference = 4617713D20B83B3700BE5DF5 /* MKYogaLayout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4617713520B83B3700BE5DF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MP;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Milker;
+				TargetAttributes = {
+					4617713C20B83B3700BE5DF5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4617713820B83B3700BE5DF5 /* Build configuration list for PBXProject "MKYogaLayout" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4617713420B83B3700BE5DF5;
+			productRefGroup = 4617713E20B83B3700BE5DF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4617713C20B83B3700BE5DF5 /* MKYogaLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4617713B20B83B3700BE5DF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4617714D20B83B3700BE5DF5 /* LaunchScreen.storyboard in Resources */,
+				4633340421D46E4D00E2CB05 /* layout.json in Resources */,
+				4617714A20B83B3700BE5DF5 /* Assets.xcassets in Resources */,
+				4633344921D62A3200E2CB05 /* style.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EA880BD724E8CC37C99E2325 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MKYogaLayout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4617713920B83B3700BE5DF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4633343621D601B300E2CB05 /* MKYogaTransform.m in Sources */,
+				4617714520B83B3700BE5DF5 /* ViewController.m in Sources */,
+				4633343921D606BE00E2CB05 /* MKExpression.m in Sources */,
+				4633343321D600D400E2CB05 /* UILabel+MKYogaStyle.m in Sources */,
+				4617715020B83B3700BE5DF5 /* main.m in Sources */,
+				4633343021D6007700E2CB05 /* UIView+MKYogaStyle.m in Sources */,
+				4633344F21D64B5600E2CB05 /* UIImageView+MKYogaStyle.m in Sources */,
+				4676337721D380CE00EADED9 /* UIView+MKYoga.m in Sources */,
+				4633344C21D642BA00E2CB05 /* MKYoga.m in Sources */,
+				4617714220B83B3700BE5DF5 /* AppDelegate.m in Sources */,
+				4648AB0721D387030082F885 /* UIColor+MKColor.m in Sources */,
+				BFFA9C22546A0DC96DCE1756 /* UIButton+MKYogaStyle.m in Sources */,
+				BFFA9983000FF670D159D41A /* MKTapGestureRecognizer.m in Sources */,
+				BFFA9D1DA8F34EA97F0EA149 /* MKScrollView.m in Sources */,
+				BFFA900DBCC771E52953E1E1 /* MPSimpleLayoutViewController.m in Sources */,
+				BFFA911143C3775A4E409A46 /* MPDataBindViewController.m in Sources */,
+				BFFA9A50A68EB01D8DBC0FA2 /* MKScreen.m in Sources */,
+				BFFA92AAF9259736AEA64CCC /* MPStyleViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4617714B20B83B3700BE5DF5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4617714C20B83B3700BE5DF5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4617715120B83B3700BE5DF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4617715220B83B3700BE5DF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4617715420B83B3700BE5DF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB19206FFC82644F75A5250 /* Pods-MKYogaLayout.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7BP4V6UPYR;
+				INFOPLIST_FILE = MKYogaLayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = milker.MKYogaLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4617715520B83B3700BE5DF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ECA026272D9F93AAC9A9E32 /* Pods-MKYogaLayout.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7BP4V6UPYR;
+				INFOPLIST_FILE = MKYogaLayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = milker.MKYogaLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4617713820B83B3700BE5DF5 /* Build configuration list for PBXProject "MKYogaLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4617715120B83B3700BE5DF5 /* Debug */,
+				4617715220B83B3700BE5DF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4617715320B83B3700BE5DF5 /* Build configuration list for PBXNativeTarget "MKYogaLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4617715420B83B3700BE5DF5 /* Debug */,
+				4617715520B83B3700BE5DF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4617713520B83B3700BE5DF5 /* Project object */;
+}

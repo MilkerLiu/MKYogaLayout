@@ -1,0 +1,51 @@
+{
+    "_style": {
+        "common": {
+            "bg": "#00FF00"
+        }
+    },
+    "layout": {
+        "view": "UIView",
+        "width": "100%",
+        "style": "common",
+        "alignItems": "flex-start",
+        "tag": 12000,
+        "subviews": [
+            {
+                "view":"UILabel",
+                "margin": "{{ user.nickname.length <= 3 ? 20 : 40 }}",
+                "text": "{{ user.nickname }}",
+                "textColor": "#0000FF",
+                "font": 24,
+                "corner": 4,
+                "uri": "meipian://121212",
+                "bg": "#00FF00",
+                "border": "2 #0000FF",
+                "shadow": {
+                    "offsetX": 1,
+                    "offsetY": 1,
+                    "color": "#0000FF"
+                }
+            },
+            {
+                "view":"UILabel",
+                "text": "{{ user.gender }}",
+                "textColor": "#0000FF",
+                "font": 24,
+                "bg": "#00FF00"
+            },
+            {
+                "view":"UIImageView",
+                "image": "http://xxxxx",
+                "width": 20,
+                "height": 20,
+                "bg": "#00FF00"
+                
+            }
+        ]
+    }
+}
+
+
+
+
