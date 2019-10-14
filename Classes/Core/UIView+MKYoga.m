@@ -12,6 +12,7 @@
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+
 @implementation UIView (MKYoga)
 
 #pragma mark - self attrs
@@ -40,7 +41,7 @@
                    context:(NSObject *)context
                      style:(NSDictionary *)style
                       data:(id)data {
-    UIView *view = (UIView *)[[self.class alloc] init];
+    UIView *view = (UIView *) [[self.class alloc] init];
     [self createSubViewsByLayout:layout rootView:view context:context style:style data:data];
     return view;
 }
@@ -50,8 +51,8 @@
 }
 
 + (void)createSubViewsByLayout:(NSDictionary *)layout
-                          rootView:(UIView *)rootView
-                           context:(NSObject *)context {
+                      rootView:(UIView *)rootView
+                       context:(NSObject *)context {
     [self createSubViewsByLayout:layout rootView:rootView context:context style:nil data:nil];
 }
 
@@ -91,7 +92,7 @@
     id viewName = style[kLView];
     UIView *view;
     if ([viewName isKindOfClass:NSString.class]) { // 字符串类型
-        view = (UIView *)[NSClassFromString(viewName) new];
+        view = (UIView *) [NSClassFromString(viewName) new];
     } else {
         view = [viewName new];
     }
@@ -108,7 +109,20 @@
 - (void)setAttributes:(NSDictionary *)attrs style:(NSDictionary *)style context:(NSObject *)context data:(id)data {
     // 设置属性
     self.layout = attrs;
- 
+
+    {
+        // bind touch event
+        NSString *eventFuncName = attrs[kLBindTouch];
+        if (eventFuncName) {
+            NSString *selectorName = [NSString stringWithFormat:@"%@:", eventFuncName];
+            SEL selector = NSSelectorFromString(selectorName);
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:context action:selector];
+            self.userInteractionEnabled = YES;
+            [self addGestureRecognizer:tap];
+        }
+    }
+
+
     {
         // bind tap event
         NSString *eventFuncName = attrs[kLBindTap];
@@ -120,16 +134,22 @@
             [self addGestureRecognizer:tap];
         }
     }
+
     {
-        // bind touch event
-        NSString *eventFuncName = attrs[kLBindTouch];
-        if (eventFuncName) {
-            NSString *selectorName = [NSString stringWithFormat:@"%@:", eventFuncName];
-            SEL selector = NSSelectorFromString(selectorName);
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:context action:selector];
-            self.userInteractionEnabled = YES;
-            [self addGestureRecognizer:tap];
+        // bind navigation
+        NSDictionary *navigation = attrs[kLNavigation];
+        id page = navigation[kLNavigationPage];
+        Class pageClass;
+        if ([page isKindOfClass:NSString.class]) {
+            pageClass = NSClassFromString(page);
+        } else {
+            pageClass = page;
         }
+
+        MKNavigatorType type = (MKNavigatorType) navigation[kLNavigationType];
+        id opt = navigation[kLNavigationOpt];
+
+
     }
 
     {
@@ -224,6 +244,17 @@
     [self.yoga applyLayoutPreservingOrigin:YES dimensionFlexibility:YGDimensionFlexibilityFlexibleWidth | YGDimensionFlexibilityFlexibleHeight];
 }
 
+#pragma mark - 辅助函数
+
+- (UIViewController *)viewController {
+    for (UIView *next = self; next; next = next.superview) {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *) nextResponder;
+        }
+    }
+    return nil;
+}
 
 @end
 

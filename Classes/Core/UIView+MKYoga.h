@@ -83,5 +83,7 @@
 
 - (void)applyLayoutAll;
 
+#pragma mark - 辅助函数
+- (UIViewController *)viewController;
 @end
 

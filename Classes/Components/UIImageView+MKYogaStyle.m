@@ -11,10 +11,17 @@
 @implementation UIImageView (MKYogaStyle)
 
 - (void)set_image:(id)value style:(NSDictionary *)style {
-    if ([value hasPrefix:@"http"]) {
-        [[MKYoga shareInstance].delegate mkYogaNetworkImageLoader:self value:value style:style];
-    } else {
-        self.image = [UIImage imageNamed:value];
+    if ([value isKindOfClass:NSDictionary.class]) {
+        NSString *url = value[kLImageUrl];
+        NSString *placeholder = value[kLImagePlaceHolder];
+        NSString *error = value[kLImageError];
+        [[MKYoga shareInstance] mkYogaNetworkImageLoader:self url:url placeholder:placeholder error:error];
+    } else if ([value isKindOfClass:NSString.class]) {
+        if ([value hasPrefix:@"http"]) {
+            [[MKYoga shareInstance] mkYogaNetworkImageLoader:self value:value style:style];
+        } else  {
+            self.image = [UIImage imageNamed:value];
+        }
     }
 }
 

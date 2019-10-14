@@ -1,5 +1,5 @@
 //
-//  MKYogo.m
+//  MKYoga.m
 //  MKYogaLayout
 //
 //  Created by Milker on 2018/12/28.
@@ -53,5 +53,30 @@ static MKYoga *instance;
 + (NSDictionary *)styleWithName:(NSString *)name {
     return [MKYoga shareInstance].styles[name];
 }
+
++ (void)setDelegate:(id <MKYogaDelegate>)delegate {
+    [MKYoga shareInstance].delegate = delegate;
+}
+
+#pragma mark - delegate
+
+- (void)mkYogaNetworkImageLoader:(UIView *)view value:(NSString *)value style:(NSDictionary *)style {
+    if ([self.delegate respondsToSelector:@selector(mkYogaNetworkImageLoader:value:style:)]) {
+        [self.delegate mkYogaNetworkImageLoader:view value:value style:style];
+    }
+}
+
+- (void)mkYogaNetworkImageLoader:(UIView *)view url:(NSString *)url placeholder:(NSString *)placeholder error:(NSString *)error {
+    if ([self.delegate respondsToSelector:@selector(mkYogaNetworkImageLoader:url:placeholder:error:)]) {
+        [self.delegate mkYogaNetworkImageLoader:view url:url placeholder:placeholder error:error];
+    }
+}
+
+- (void)mkYogaRouterEvent:(UIView *)view value:(NSURL *)value {
+    if ([self.delegate respondsToSelector:@selector(mkYogaRouterEvent:value:)]) {
+        [self.delegate mkYogaRouterEvent:view value:value];
+    }
+}
+
 
 @end

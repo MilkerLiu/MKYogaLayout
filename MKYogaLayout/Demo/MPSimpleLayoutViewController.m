@@ -12,8 +12,14 @@
 
 }
 
+- (instancetype)init {
+    self = [super init];
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     [self initNavbar];
 
     NSDictionary *layout = @{
@@ -32,6 +38,9 @@
 
 - (void)initNavbar {
     [self setTitle:@"Simple Layout"];
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:nil];
+    self.navigationItem.rightBarButtonItem = back;
+    self.navigationItem.leftBarButtonItem = back;
 }
 
 #pragma mark - views

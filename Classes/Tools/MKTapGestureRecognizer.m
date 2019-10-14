@@ -15,8 +15,8 @@
     [super touchesBegan:touches withEvent:event];
     UITouch *touch = ((UITouch *)[[touches allObjects] firstObject]);
     UIView *v = touch.view;
-    if (v.mkBgHighlight) {
-        v.backgroundColor = v.mkBgHighlight;
+    if (v.mk_bgHighlight) {
+        v.backgroundColor = v.mk_bgHighlight;
     } else {
         v.alpha = 0.5;
     }
@@ -27,14 +27,14 @@
     UITouch *touch = ((UITouch *)[[touches allObjects] firstObject]);
     UIView *v = touch.view;
     if (CGRectContainsPoint(v.bounds, [touch locationInView:v])) {
-        if (v.mkBgHighlight) {
-            v.backgroundColor = v.mkBgHighlight;
+        if (v.mk_bgHighlight) {
+            v.backgroundColor = v.mk_bgHighlight;
         } else {
             v.alpha = 0.5;
         }
     } else {
-        if (v.mkBgHighlight) {
-            v.backgroundColor = v.mkBg ?: [UIColor whiteColor];
+        if (v.mk_bgHighlight) {
+            v.backgroundColor = v.mk_bg ?: [UIColor whiteColor];
         } else {
             v.alpha = 1;
         }
@@ -45,8 +45,8 @@
     [super touchesEnded:touches withEvent:event];
     UITouch *touch = ((UITouch *)[[touches allObjects] firstObject]);
     UIView *v = touch.view;
-    if (v.mkBgHighlight) {
-        v.backgroundColor = v.mkBg ?: [UIColor whiteColor];
+    if (v.mk_bgHighlight) {
+        v.backgroundColor = v.mk_bg ?: [UIColor whiteColor];
     } else {
         v.alpha = 1;
     }
@@ -56,8 +56,8 @@
     [super touchesCancelled:touches withEvent:event];
     UITouch *touch = ((UITouch *)[[touches allObjects] firstObject]);
     UIView *v = touch.view;
-    if (v.mkBgHighlight) {
-        v.backgroundColor = v.mkBg ?: [UIColor whiteColor];
+    if (v.mk_bgHighlight) {
+        v.backgroundColor = v.mk_bg ?: [UIColor whiteColor];
     } else {
         v.alpha = 1;
     }

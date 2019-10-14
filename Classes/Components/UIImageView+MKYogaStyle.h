@@ -9,7 +9,10 @@
 #import "MKYogaLayout.h"
 
 static const NSString *kLImagePath = @"imagePath";  /// 本地图片路径/网络图片路径
-static const NSString *kLImage = @"image"; /// 同 kLImagePath，废弃
+static const NSString *kLImage = @"image"; /// 组合使用
+    static const NSString *kLImageError = @"error"; /// 组合使用
+    static const NSString *kLImagePlaceHolder = @"placeholder"; /// 组合使用
+    static const NSString *kLImageUrl = @"url"; /// 组合使用
 static const NSString *kLImageName = @"imageName"; /// 图片名
 static const NSString *kLContentMode = @"contentMode"; /// 图片名, UIViewContentMode：all
 static const NSString *kLPlaceHolder = @"placeholder"; /// 图片名, 占位图片

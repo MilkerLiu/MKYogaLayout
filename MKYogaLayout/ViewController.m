@@ -14,7 +14,7 @@
 #import "MPStyleViewController.h"
 
 @interface ViewController ()
-@property (nonatomic, strong) UILabel *nickname;
+@property(nonatomic, strong) UILabel *nickname;
 @end
 
 @implementation ViewController
@@ -36,11 +36,16 @@
     NSDictionary *layout = @{
             kLPaddingTop: @(MKScreen.safeTop),
             kLBg: @"#FFFFFF",
-            kLSubviews: @[
+            kLSubviews:
+            @[
                     @{
                             kLView: UILabel.class,
                             kLStyle: @"item",
-                            kLBindTap: @"gotoSimpleLayout",
+                            kLNavigation:
+                            @{
+                                    kLNavigationPage: MPSimpleLayoutViewController.class,
+                                    kLNavigationType: @(MKNavigatorPresentWithNavigation)
+                            },
                             kLText: @"简单布局"
                     },
                     @{
@@ -54,7 +59,8 @@
                             kLStyle: @"item",
                             kLBindTap: @"gotoStyleDemo",
                             kLText: @"样式表"
-                    }]
+                    }
+            ]
     };
 
     [UIView createSubViewsByLayout:layout rootView:self.view context:self style:style data:nil];

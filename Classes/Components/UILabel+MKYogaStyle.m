@@ -9,18 +9,55 @@
 #import "UILabel+MKYogaStyle.h"
 
 @implementation UILabel (MKYogaStyle)
-static NSDictionary * textAlignmentEnumDic;
-static NSDictionary * lineBreakModeEnumDic;
+static NSDictionary *textAlignmentEnumDic;
+static NSDictionary *lineBreakModeEnumDic;
 
 - (void)set_text:(id)value style:(NSDictionary *)style {
     NSString *text = [value isKindOfClass:NSString.class] ? value : [NSString stringWithFormat:@"%@", value ?: @""];
-    if ([[style allKeys] containsObject:@"lineSpace"]) {
-        CGFloat lineSpace = [[style valueForKey:@"lineSpace"] floatValue];
-        [self setText:text lineSpace:lineSpace];
+
+    NSDictionary *attrs = style[kLAttributeText];
+    if ([attrs isKindOfClass:NSDictionary.class]) {
+
+        CGFloat lineHeight = [attrs[kLAttributeTextLineHeight] floatValue];
+        CGFloat lineSpace = [attrs[kLAttributeTextLineSpace] floatValue];
+        NSTextAlignment textAlignment = (NSTextAlignment) [attrs[kLTextAlignment] integerValue];
+
+        UIFont *font;
+        CGFloat fontSize = [attrs[kLFont] floatValue];
+        CGFloat fontBoldSize = [attrs[kLBoldFont] floatValue];
+        if (fontBoldSize > 0) {
+            font = [UIFont boldSystemFontOfSize:fontBoldSize];
+        } else {
+            font = [UIFont systemFontOfSize:fontSize > 0 ? fontSize : 14];
+        }
+
+        CGFloat baselineOffset = (lineHeight - font.lineHeight) / 4;
+
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text];
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        [paragraphStyle setLineSpacing:lineSpace];
+        [paragraphStyle setMinimumLineHeight:lineHeight];
+        [paragraphStyle setMaximumLineHeight:lineHeight];
+        [paragraphStyle setAlignment:textAlignment];
+
+        NSDictionary *textStyles = @{
+                NSParagraphStyleAttributeName: paragraphStyle,
+                NSFontAttributeName: font,
+                NSBaselineOffsetAttributeName: @(baselineOffset),
+        };
+        [attributedString addAttributes:textStyles range:NSMakeRange(0, [text length])];
+        self.attributedText = attributedString;
+
     } else {
         self.text = text;
     }
     [self.yoga markDirty];
+}
+
+- (void)set_attributeText:(id)value style:(NSDictionary *)style {
+    if ([value isKindOfClass:NSAttributedString.class]) {
+        self.attributedText = value;
+    }
 }
 
 - (void)setText:(NSString *)text lineSpace:(CGFloat)lineSpace {
@@ -56,12 +93,12 @@ static NSDictionary * lineBreakModeEnumDic;
         dispatch_once(&onceToken, ^{
             if (!textAlignmentEnumDic) {
                 textAlignmentEnumDic = @{
-                                         @"NSTextAlignmentLeft":@(NSTextAlignmentLeft),
-                                         @"NSTextAlignmentCenter":@(NSTextAlignmentCenter),
-                                         @"NSTextAlignmentRight":@(NSTextAlignmentRight),
-                                         @"NSTextAlignmentJustified":@(NSTextAlignmentJustified),
-                                         @"NSTextAlignmentNatural":@(NSTextAlignmentNatural)
-                                         };
+                        @"NSTextAlignmentLeft": @(NSTextAlignmentLeft),
+                        @"NSTextAlignmentCenter": @(NSTextAlignmentCenter),
+                        @"NSTextAlignmentRight": @(NSTextAlignmentRight),
+                        @"NSTextAlignmentJustified": @(NSTextAlignmentJustified),
+                        @"NSTextAlignmentNatural": @(NSTextAlignmentNatural)
+                };
             }
         });
         self.textAlignment = [textAlignmentEnumDic[value] integerValue];
@@ -76,13 +113,13 @@ static NSDictionary * lineBreakModeEnumDic;
         dispatch_once(&onceToken, ^{
             if (!lineBreakModeEnumDic) {
                 lineBreakModeEnumDic = @{
-                                         @"NSLineBreakByWordWrapping":@(NSLineBreakByWordWrapping),
-                                         @"NSLineBreakByCharWrapping":@(NSLineBreakByCharWrapping),
-                                         @"NSLineBreakByClipping":@(NSLineBreakByClipping),
-                                         @"NSLineBreakByTruncatingHead":@(NSLineBreakByTruncatingHead),
-                                         @"NSLineBreakByTruncatingTail":@(NSLineBreakByTruncatingTail),
-                                         @"NSLineBreakByTruncatingMiddle":@(NSLineBreakByTruncatingMiddle)
-                                         };
+                        @"NSLineBreakByWordWrapping": @(NSLineBreakByWordWrapping),
+                        @"NSLineBreakByCharWrapping": @(NSLineBreakByCharWrapping),
+                        @"NSLineBreakByClipping": @(NSLineBreakByClipping),
+                        @"NSLineBreakByTruncatingHead": @(NSLineBreakByTruncatingHead),
+                        @"NSLineBreakByTruncatingTail": @(NSLineBreakByTruncatingTail),
+                        @"NSLineBreakByTruncatingMiddle": @(NSLineBreakByTruncatingMiddle)
+                };
             }
         });
         self.lineBreakMode = [lineBreakModeEnumDic[value] integerValue];

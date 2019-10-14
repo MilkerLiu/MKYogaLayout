@@ -16,6 +16,10 @@ static const NSString *kLBindTap = @"bindtap"; /// 拥有半透明点击态
 static const NSString *kLBindTouch = @"bindtouch"; /// 轻触，点击，无点击态
 static const NSString *kLAlias = @"alias";
 static const NSString *kLObj = @"obj";
+static const NSString *kLNavigation = @"navigation"; /// 导航器
+    static const NSString *kLNavigationPage = @"navigationPage"; /// 目标页面
+    static const NSString *kLNavigationOpt = @"navigationOpt"; /// 携带的参数
+    static const NSString *kLNavigationType = @"navigationType"; /// 采用Push还是Present
 
 static const NSString *kLDirection = @"direction";
 static const NSString *kLFlexDirection = @"flexDirection";
@@ -72,8 +76,9 @@ static const NSString *kLHidden = @"hidden"; // 占位隐藏，Boolean, YES: 隐
 @interface UIView (MKYogaStyle)
 
 @property (nonatomic, strong) id obj; /// 给视图绑定的示例，存储数据用
-@property (nonatomic, strong) UIColor *mkBgHighlight; /// 高亮背景色
-@property (nonatomic, strong) UIColor *mkBg; /// 高亮普通色
-@property (nonatomic, copy) NSString *mkUri; /// 点击路由
+@property (nonatomic, strong) UIColor *mk_bgHighlight; /// 高亮背景色
+@property (nonatomic, strong) UIColor *mk_bg; /// 高亮普通色
+@property (nonatomic, copy) NSString *mk_uri; /// 点击路由
+@property (nonatomic, copy) NSDictionary *mk_navigation; /// 点击路由
 
 @end

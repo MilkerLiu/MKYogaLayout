@@ -29,6 +29,7 @@
 		BFFA900DBCC771E52953E1E1 /* MPSimpleLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA92B73ADC36505EE04CE9 /* MPSimpleLayoutViewController.m */; };
 		BFFA911143C3775A4E409A46 /* MPDataBindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9F708D73242D95B46E99 /* MPDataBindViewController.m */; };
 		BFFA92AAF9259736AEA64CCC /* MPStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA900827C3B580A54BA3FC /* MPStyleViewController.m */; };
+		BFFA95690BA0C53086D7F768 /* MPLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9F54024077896BB556F3 /* MPLabelViewController.m */; };
 		BFFA9983000FF670D159D41A /* MKTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA945FE0DE79D14366934D /* MKTapGestureRecognizer.m */; };
 		BFFA9A50A68EB01D8DBC0FA2 /* MKScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9B8ED620A55F6DCFF4B7 /* MKScreen.m */; };
 		BFFA9C22546A0DC96DCE1756 /* UIButton+MKYogaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9FAE0752F9674BA33285 /* UIButton+MKYogaStyle.m */; };
@@ -73,6 +74,7 @@
 		BFFA906D7A0F86AC071B3B5D /* MKScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKScrollView.m; sourceTree = "<group>"; };
 		BFFA92B73ADC36505EE04CE9 /* MPSimpleLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSimpleLayoutViewController.m; sourceTree = "<group>"; };
 		BFFA945FE0DE79D14366934D /* MKTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTapGestureRecognizer.m; sourceTree = "<group>"; };
+		BFFA9809CD13EB669DCB96A7 /* MPLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPLabelViewController.h; sourceTree = "<group>"; };
 		BFFA980C3E56DC459995C640 /* MKTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTapGestureRecognizer.h; sourceTree = "<group>"; };
 		BFFA9949EA0EC15104C43555 /* MKScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKScreen.h; sourceTree = "<group>"; };
 		BFFA9AB95FF30E7B7FA6953A /* MPDataBindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPDataBindViewController.h; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		BFFA9B8ED620A55F6DCFF4B7 /* MKScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKScreen.m; sourceTree = "<group>"; };
 		BFFA9BB0469973B57453E263 /* MKScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKScrollView.h; sourceTree = "<group>"; };
 		BFFA9E0F0590CB52FC3234F6 /* MPStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPStyleViewController.h; sourceTree = "<group>"; };
+		BFFA9F54024077896BB556F3 /* MPLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPLabelViewController.m; sourceTree = "<group>"; };
 		BFFA9F708D73242D95B46E99 /* MPDataBindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPDataBindViewController.m; sourceTree = "<group>"; };
 		BFFA9F754BC814C02D301815 /* MPSimpleLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSimpleLayoutViewController.h; sourceTree = "<group>"; };
 		BFFA9FAE0752F9674BA33285 /* UIButton+MKYogaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MKYogaStyle.m"; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 				BFFA9AB95FF30E7B7FA6953A /* MPDataBindViewController.h */,
 				BFFA900827C3B580A54BA3FC /* MPStyleViewController.m */,
 				BFFA9E0F0590CB52FC3234F6 /* MPStyleViewController.h */,
+				BFFA9F54024077896BB556F3 /* MPLabelViewController.m */,
+				BFFA9809CD13EB669DCB96A7 /* MPLabelViewController.h */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				BFFA911143C3775A4E409A46 /* MPDataBindViewController.m in Sources */,
 				BFFA9A50A68EB01D8DBC0FA2 /* MKScreen.m in Sources */,
 				BFFA92AAF9259736AEA64CCC /* MPStyleViewController.m in Sources */,
+				BFFA95690BA0C53086D7F768 /* MPLabelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
