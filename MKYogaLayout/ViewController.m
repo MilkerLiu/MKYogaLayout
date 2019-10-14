@@ -12,6 +12,7 @@
 #import "MPSimpleLayoutViewController.h"
 #import "MPDataBindViewController.h"
 #import "MPStyleViewController.h"
+#import "MPLabelViewController.h"
 
 @interface ViewController ()
 @property(nonatomic, strong) UILabel *nickname;
@@ -59,6 +60,15 @@
                             kLStyle: @"item",
                             kLBindTap: @"gotoStyleDemo",
                             kLText: @"样式表"
+                    },
+                    @{
+                            kLView: UILabel.class,
+                            kLStyle: @"item",
+                            kLText: @"文本",
+                            kLNavigation:
+                            @{
+                                    kLNavigationPage: MPLabelViewController.class,
+                            },
                     }
             ]
     };

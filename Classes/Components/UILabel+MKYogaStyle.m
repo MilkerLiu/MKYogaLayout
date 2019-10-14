@@ -14,14 +14,19 @@ static NSDictionary *lineBreakModeEnumDic;
 
 - (void)set_text:(id)value style:(NSDictionary *)style {
     NSString *text = [value isKindOfClass:NSString.class] ? value : [NSString stringWithFormat:@"%@", value ?: @""];
+    self.text = text;
+    [self.yoga markDirty];
+}
 
-    NSDictionary *attrs = style[kLAttributeText];
-    if ([attrs isKindOfClass:NSDictionary.class]) {
+- (void)set_attributeText:(id)value style:(NSDictionary *)style {
+    if ([value isKindOfClass:NSAttributedString.class]) {
+        self.attributedText = value;
+    } else if ([value isKindOfClass:NSDictionary.class]) {
+        NSDictionary *attrs = style[kLAttributeText];
 
-        CGFloat lineHeight = [attrs[kLAttributeTextLineHeight] floatValue];
-        CGFloat lineSpace = [attrs[kLAttributeTextLineSpace] floatValue];
-        NSTextAlignment textAlignment = (NSTextAlignment) [attrs[kLTextAlignment] integerValue];
+        id v = attrs[kLText];
 
+        NSString *text = [v isKindOfClass:NSString.class] ? v : [NSString stringWithFormat:@"%@", v ?: @""];
         UIFont *font;
         CGFloat fontSize = [attrs[kLFont] floatValue];
         CGFloat fontBoldSize = [attrs[kLBoldFont] floatValue];
@@ -31,32 +36,33 @@ static NSDictionary *lineBreakModeEnumDic;
             font = [UIFont systemFontOfSize:fontSize > 0 ? fontSize : 14];
         }
 
-        CGFloat baselineOffset = (lineHeight - font.lineHeight) / 4;
-
         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text];
         NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-        [paragraphStyle setLineSpacing:lineSpace];
-        [paragraphStyle setMinimumLineHeight:lineHeight];
-        [paragraphStyle setMaximumLineHeight:lineHeight];
-        [paragraphStyle setAlignment:textAlignment];
+
+        if ([attrs.allKeys containsObject:kLAttributeTextLineSpace]) {
+            [paragraphStyle setLineSpacing:[attrs[kLAttributeTextLineSpace] floatValue]];
+        }
+
+        if ([attrs.allKeys containsObject:kLAttributeTextLineHeight]) {
+            CGFloat lineHeight = [attrs[kLAttributeTextLineHeight] floatValue];
+            [paragraphStyle setMinimumLineHeight:lineHeight];
+            [paragraphStyle setMaximumLineHeight:lineHeight];
+        }
+
+        if ([attrs.allKeys containsObject:kLTextAlignment]) {
+            [paragraphStyle setAlignment:(NSTextAlignment) [attrs[kLTextAlignment] integerValue]];
+        }
+
+        if ([attrs.allKeys containsObject:kLLineBreakMode]) {
+            [paragraphStyle setLineBreakMode:(NSLineBreakMode) [attrs[kLLineBreakMode] integerValue]];
+        }
 
         NSDictionary *textStyles = @{
                 NSParagraphStyleAttributeName: paragraphStyle,
                 NSFontAttributeName: font,
-                NSBaselineOffsetAttributeName: @(baselineOffset),
         };
         [attributedString addAttributes:textStyles range:NSMakeRange(0, [text length])];
         self.attributedText = attributedString;
-
-    } else {
-        self.text = text;
-    }
-    [self.yoga markDirty];
-}
-
-- (void)set_attributeText:(id)value style:(NSDictionary *)style {
-    if ([value isKindOfClass:NSAttributedString.class]) {
-        self.attributedText = value;
     }
 }
 
