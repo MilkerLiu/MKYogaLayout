@@ -93,7 +93,7 @@ static NSDictionary *lineBreakModeEnumDic;
 
 - (void)set_textAlignment:(id)value style:(NSDictionary *)style {
     if ([value isKindOfClass:[NSNumber class]]) {
-        self.textAlignment = [value integerValue];
+        self.textAlignment = (NSTextAlignment)[value integerValue];
     } else if ([value isKindOfClass:[NSString class]]) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
@@ -107,13 +107,13 @@ static NSDictionary *lineBreakModeEnumDic;
                 };
             }
         });
-        self.textAlignment = [textAlignmentEnumDic[value] integerValue];
+        self.textAlignment = (NSTextAlignment)[textAlignmentEnumDic[value] integerValue];
     }
 }
 
 - (void)set_lineBreakMode:(id)value style:(NSDictionary *)style {
     if ([value isKindOfClass:[NSNumber class]]) {
-        self.lineBreakMode = [value integerValue];
+        self.lineBreakMode = (NSLineBreakMode)[value integerValue];
     } else if ([value isKindOfClass:[NSString class]]) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
@@ -128,7 +128,7 @@ static NSDictionary *lineBreakModeEnumDic;
                 };
             }
         });
-        self.lineBreakMode = [lineBreakModeEnumDic[value] integerValue];
+        self.lineBreakMode = (NSLineBreakMode)[lineBreakModeEnumDic[value] integerValue];
     }
 }
 

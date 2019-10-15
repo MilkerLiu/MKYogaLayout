@@ -13,6 +13,7 @@
 #import "MPDataBindViewController.h"
 #import "MPStyleViewController.h"
 #import "MPLabelViewController.h"
+#import "MPTextInputViewController.h"
 
 @interface ViewController ()
 @property(nonatomic, strong) UILabel *nickname;
@@ -45,7 +46,6 @@
                             kLNavigation:
                             @{
                                     kLNavigationPage: MPSimpleLayoutViewController.class,
-                                    kLNavigationType: @(MKNavigatorPresentWithNavigation)
                             },
                             kLText: @"简单布局"
                     },
@@ -68,6 +68,15 @@
                             kLNavigation:
                             @{
                                     kLNavigationPage: MPLabelViewController.class,
+                            },
+                    },
+                    @{
+                            kLView: UILabel.class,
+                            kLStyle: @"item",
+                            kLText: @"输入框",
+                            kLNavigation:
+                            @{
+                                    kLNavigationPage: MPTextInputViewController.class,
                             },
                     }
             ]

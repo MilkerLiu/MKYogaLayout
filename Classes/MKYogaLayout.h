@@ -16,11 +16,15 @@
 #import "UIColor+MKColor.h"
 #import "MKYogaTransform.h"
 #import "MKExpression.h"
+#import "MKScreen.h"
 #import "MKYoga.h"
+#import "UIView+MKRect.h"
 #import "UIView+MKYogaStyle.h"
 #import "UILabel+MKYogaStyle.h"
 #import "UIImageView+MKYogaStyle.h"
 #import "UIButton+MKYogaStyle.h"
+#import "UITextField+MKYogaStyle.h"
+#import "UITextView+MKYogaStyle.h"
 #import "MKScrollView.h"
 
 #endif /* MKYogaLayout_h */

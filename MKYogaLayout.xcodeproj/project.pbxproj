@@ -28,12 +28,17 @@
 		BFDF0910DA89165ADEB44E2F /* libPods-MKYogaLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A965F7FB976BAF0BE80D85E3 /* libPods-MKYogaLayout.a */; };
 		BFFA900DBCC771E52953E1E1 /* MPSimpleLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA92B73ADC36505EE04CE9 /* MPSimpleLayoutViewController.m */; };
 		BFFA911143C3775A4E409A46 /* MPDataBindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9F708D73242D95B46E99 /* MPDataBindViewController.m */; };
+		BFFA918D0C110782701D170C /* UIView+MKRect.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9E7A78E7F6796553279B /* UIView+MKRect.m */; };
+		BFFA91A3D83C6A3688B8ADD4 /* MPTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9772DF6E73BEEFBECFC6 /* MPTextInputViewController.m */; };
+		BFFA9243E8CB1E95D1CCE57B /* UITextField+MKYogaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA95E73B70B58CE88D3961 /* UITextField+MKYogaStyle.m */; };
 		BFFA92AAF9259736AEA64CCC /* MPStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA900827C3B580A54BA3FC /* MPStyleViewController.m */; };
+		BFFA93C3131FF11FE0B58451 /* UITextView+MKYogaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA97241EC440675A675271 /* UITextView+MKYogaStyle.m */; };
 		BFFA95690BA0C53086D7F768 /* MPLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9F54024077896BB556F3 /* MPLabelViewController.m */; };
 		BFFA9983000FF670D159D41A /* MKTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA945FE0DE79D14366934D /* MKTapGestureRecognizer.m */; };
 		BFFA9A50A68EB01D8DBC0FA2 /* MKScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9B8ED620A55F6DCFF4B7 /* MKScreen.m */; };
 		BFFA9C22546A0DC96DCE1756 /* UIButton+MKYogaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9FAE0752F9674BA33285 /* UIButton+MKYogaStyle.m */; };
 		BFFA9D1DA8F34EA97F0EA149 /* MKScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA906D7A0F86AC071B3B5D /* MKScrollView.m */; };
+		BFFA9E03041784BAED2BED84 /* UITextView+MPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFA9A02472ACD3704B9BAFD /* UITextView+MPlaceholder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,17 +79,27 @@
 		BFFA906D7A0F86AC071B3B5D /* MKScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKScrollView.m; sourceTree = "<group>"; };
 		BFFA92B73ADC36505EE04CE9 /* MPSimpleLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSimpleLayoutViewController.m; sourceTree = "<group>"; };
 		BFFA945FE0DE79D14366934D /* MKTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTapGestureRecognizer.m; sourceTree = "<group>"; };
+		BFFA95E73B70B58CE88D3961 /* UITextField+MKYogaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+MKYogaStyle.m"; sourceTree = "<group>"; };
+		BFFA97241EC440675A675271 /* UITextView+MKYogaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+MKYogaStyle.m"; sourceTree = "<group>"; };
+		BFFA9768914D9CCE92F951C7 /* MPTextInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTextInputViewController.h; sourceTree = "<group>"; };
+		BFFA9772DF6E73BEEFBECFC6 /* MPTextInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTextInputViewController.m; sourceTree = "<group>"; };
 		BFFA9809CD13EB669DCB96A7 /* MPLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPLabelViewController.h; sourceTree = "<group>"; };
 		BFFA980C3E56DC459995C640 /* MKTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKTapGestureRecognizer.h; sourceTree = "<group>"; };
+		BFFA985CF94D23E151446C9A /* UIView+MKRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MKRect.h"; sourceTree = "<group>"; };
 		BFFA9949EA0EC15104C43555 /* MKScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKScreen.h; sourceTree = "<group>"; };
+		BFFA9A02472ACD3704B9BAFD /* UITextView+MPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+MPlaceholder.m"; sourceTree = "<group>"; };
 		BFFA9AB95FF30E7B7FA6953A /* MPDataBindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPDataBindViewController.h; sourceTree = "<group>"; };
 		BFFA9B219185D61F805EFBF0 /* UIButton+MKYogaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MKYogaStyle.h"; sourceTree = "<group>"; };
 		BFFA9B8ED620A55F6DCFF4B7 /* MKScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKScreen.m; sourceTree = "<group>"; };
 		BFFA9BB0469973B57453E263 /* MKScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKScrollView.h; sourceTree = "<group>"; };
+		BFFA9D3C0887A57A72244E6F /* UITextField+MKYogaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+MKYogaStyle.h"; sourceTree = "<group>"; };
 		BFFA9E0F0590CB52FC3234F6 /* MPStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPStyleViewController.h; sourceTree = "<group>"; };
+		BFFA9E7A78E7F6796553279B /* UIView+MKRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKRect.m"; sourceTree = "<group>"; };
+		BFFA9F2DCA7007E215E3C4BD /* UITextView+MKYogaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+MKYogaStyle.h"; sourceTree = "<group>"; };
 		BFFA9F54024077896BB556F3 /* MPLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPLabelViewController.m; sourceTree = "<group>"; };
 		BFFA9F708D73242D95B46E99 /* MPDataBindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPDataBindViewController.m; sourceTree = "<group>"; };
 		BFFA9F754BC814C02D301815 /* MPSimpleLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSimpleLayoutViewController.h; sourceTree = "<group>"; };
+		BFFA9F88893372478C23BEA8 /* UITextView+MPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+MPlaceholder.h"; sourceTree = "<group>"; };
 		BFFA9FAE0752F9674BA33285 /* UIButton+MKYogaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MKYogaStyle.m"; sourceTree = "<group>"; };
 		EAB19206FFC82644F75A5250 /* Pods-MKYogaLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKYogaLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MKYogaLayout/Pods-MKYogaLayout.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +164,8 @@
 				4676337621D380CE00EADED9 /* UIView+MKYoga.m */,
 				4633344A21D642BA00E2CB05 /* MKYoga.h */,
 				4633344B21D642BA00E2CB05 /* MKYoga.m */,
+				BFFA9E7A78E7F6796553279B /* UIView+MKRect.m */,
+				BFFA985CF94D23E151446C9A /* UIView+MKRect.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -166,6 +183,10 @@
 				BFFA9B219185D61F805EFBF0 /* UIButton+MKYogaStyle.h */,
 				BFFA9BB0469973B57453E263 /* MKScrollView.h */,
 				BFFA906D7A0F86AC071B3B5D /* MKScrollView.m */,
+				BFFA95E73B70B58CE88D3961 /* UITextField+MKYogaStyle.m */,
+				BFFA9D3C0887A57A72244E6F /* UITextField+MKYogaStyle.h */,
+				BFFA9F2DCA7007E215E3C4BD /* UITextView+MKYogaStyle.h */,
+				BFFA97241EC440675A675271 /* UITextView+MKYogaStyle.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -183,6 +204,8 @@
 				BFFA980C3E56DC459995C640 /* MKTapGestureRecognizer.h */,
 				BFFA9B8ED620A55F6DCFF4B7 /* MKScreen.m */,
 				BFFA9949EA0EC15104C43555 /* MKScreen.h */,
+				BFFA9A02472ACD3704B9BAFD /* UITextView+MPlaceholder.m */,
+				BFFA9F88893372478C23BEA8 /* UITextView+MPlaceholder.h */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -227,6 +250,8 @@
 				BFFA9E0F0590CB52FC3234F6 /* MPStyleViewController.h */,
 				BFFA9F54024077896BB556F3 /* MPLabelViewController.m */,
 				BFFA9809CD13EB669DCB96A7 /* MPLabelViewController.h */,
+				BFFA9772DF6E73BEEFBECFC6 /* MPTextInputViewController.m */,
+				BFFA9768914D9CCE92F951C7 /* MPTextInputViewController.h */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -354,6 +379,11 @@
 				BFFA9A50A68EB01D8DBC0FA2 /* MKScreen.m in Sources */,
 				BFFA92AAF9259736AEA64CCC /* MPStyleViewController.m in Sources */,
 				BFFA95690BA0C53086D7F768 /* MPLabelViewController.m in Sources */,
+				BFFA9243E8CB1E95D1CCE57B /* UITextField+MKYogaStyle.m in Sources */,
+				BFFA91A3D83C6A3688B8ADD4 /* MPTextInputViewController.m in Sources */,
+				BFFA918D0C110782701D170C /* UIView+MKRect.m in Sources */,
+				BFFA9E03041784BAED2BED84 /* UITextView+MPlaceholder.m in Sources */,
+				BFFA93C3131FF11FE0B58451 /* UITextView+MKYogaStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

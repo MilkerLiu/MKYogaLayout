@@ -2,12 +2,11 @@
 // Created by Milker on 2019-09-02.
 //
 
-#import <Core/UITextView+Placeholder.h>
+#import "UITextView+MPlaceholder.h"
 #import "UITextView+MKYogaStyle.h"
 
 
 @implementation UITextView (MKYogaStyle)
-
 
 - (void)set_placeholder:(id)value style:(NSDictionary *)style {
     self.placeholder = value;

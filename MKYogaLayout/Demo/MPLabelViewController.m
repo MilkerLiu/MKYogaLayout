@@ -37,6 +37,13 @@
                     @{
                             kLView: UILabel.class,
                             kLMarginTop: @20,
+                            kLPadding:@20,
+                            kLText: @"要主动做点事",
+                            kLMaxLines: @2,
+                    },
+                    @{
+                            kLView: UILabel.class,
+                            kLMarginTop: @20,
                             kLBg: @"#FFCC99",
                             kLAttributeText:
                             @{
