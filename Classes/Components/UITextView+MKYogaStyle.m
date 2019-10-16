@@ -16,13 +16,20 @@
     self.placeholderColor = [MKYogaTransform transColor:value];
 }
 
+- (void)set_textColor:(id)value style:(NSDictionary *)style {
+    self.textColor = [MKYogaTransform transColor:value];
+}
+
 - (void)set_font:(id)value style:(NSDictionary *)style {
     self.font = [UIFont systemFontOfSize:[value floatValue]];
 }
 
+- (void)set_boldFont:(id)value style:(NSDictionary *)style {
+    self.font = [UIFont boldSystemFontOfSize:[value floatValue]];
+}
+
 - (void)set_textContainerInset:(id)value style:(NSDictionary *)style {
     UIEdgeInsets inset = self.textContainerInset;
-
     if ([value isKindOfClass:[NSString class]]) {
         // 多值
         NSArray *items = [value componentsSeparatedByString:@" "];

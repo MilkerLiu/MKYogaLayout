@@ -35,6 +35,7 @@
                             kLView: UITextView.class,
                             kLMarginTop: @20,
                             kLPadding: @20,
+                            kLFont: @20,
                             kLTextContainerInset: @"10",
                             kLPlaceHolder: @"哈哈哈",
                             kLCorner: @10,
