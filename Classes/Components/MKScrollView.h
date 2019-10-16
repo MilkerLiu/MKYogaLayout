@@ -3,7 +3,7 @@
 //
 #import <UIKit/UIKit.h>
 
-//static const NSString *kLFlexDirection = @"flexDirection"; /// 横向滚动还是纵向滚动
+//static const NSString *kLFlexDirection = @"flexDirection"; /// 横向滚动还是纵向滚动, 默认为纵向滚动，此属性需设置
 
 static const NSString *kLBouncesEnabled = @"sc_bounces"; /// 弹簧效果, 默认开启
 static const NSString *kLPagingEnabled = @"sc_paging"; /// 分页效果, 默认关闭

@@ -313,11 +313,16 @@
     self.mk_bgHighlight = [MKYogaTransform transColor:value];
 }
 
-- (void)set_shadow:(NSDictionary *)value style:(NSDictionary *)style {
-    id opacity = [value valueForKey:@"offsetX"];
-    self.layer.shadowOpacity = opacity ? [opacity floatValue] : 1;
-    self.layer.shadowColor = [[MKYogaTransform transColor:value[@"color"]] CGColor];
-    self.layer.shadowOffset = CGSizeMake([[value valueForKey:@"offsetX"] floatValue], [[value valueForKey:@"offsetY"] floatValue]);
+- (void)set_shadow:(NSString *)value style:(NSDictionary *)style {
+    NSArray *items = [value componentsSeparatedByString:@" "];
+    CGFloat offsetX = [items[0] floatValue];
+    CGFloat offsetY = [items[1] floatValue];
+    NSString *color = [items[2] stringValue];
+    NSInteger opacity = [items[3] integerValue];
+
+    self.layer.shadowOpacity = opacity == 1;
+    self.layer.shadowColor = [[MKYogaTransform transColor:color] CGColor];
+    self.layer.shadowOffset = CGSizeMake(offsetX, offsetY);
 }
 
 - (void)set_corner:(id)value style:(NSDictionary *)style {

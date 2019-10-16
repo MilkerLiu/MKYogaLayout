@@ -349,6 +349,12 @@ model.title = @"Milker"; = @"Jack";
 
 * 参见：`UIView+MKYogaStyle.h`
 
+### 通用属性
+
+* kLCorner: 圆角, 支持单圆角设置，逻辑尺寸
+* kLBorder: 边框, "$Width $Color"
+* kLShadow: 阴影,
+
 ### UIView
 
 * kLView: 字符串/class, 指定视图类名或类型
