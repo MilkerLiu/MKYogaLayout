@@ -38,9 +38,6 @@
 
 - (void)initNavbar {
     [self setTitle:@"Simple Layout"];
-    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:nil];
-    self.navigationItem.rightBarButtonItem = back;
-    self.navigationItem.leftBarButtonItem = back;
 }
 
 #pragma mark - views

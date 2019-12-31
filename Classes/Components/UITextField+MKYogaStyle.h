@@ -8,7 +8,7 @@
 
 #pragma mark - Attrs
 
-static const NSString *kLClearButtonMode = @"clearButtonMode";  /// 字符串类型
+static const NSString *kLClearButtonMode = @"clearButtonMode";  /// UITextFieldViewMode 类型，尾部清空按钮类型
 //static const NSString *kLPlaceHolder = @"placeholder";        /// 图片名, 占位图片
 
 @interface UITextField (MKYogaStyle)

@@ -44,7 +44,7 @@
                             kLView: UILabel.class,
                             kLStyle: @"item",
                             kLNavigation:
-                            @{
+                            @{ /// 这里使用了导航器的配置
                                     kLNavigationPage: MPSimpleLayoutViewController.class,
                             },
                             kLText: @"简单布局"
